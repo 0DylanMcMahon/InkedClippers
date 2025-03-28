@@ -1,6 +1,4 @@
 from django.db import models
-from cloudinary_storage.storage import RawMediaCloudinaryStorage
-from cloudinary.models import CloudinaryField
 from django.contrib.auth.models import User
 
 
@@ -16,7 +14,7 @@ class BarberMembers(models.Model):
     Model for the barbers info
     """
     name = models.CharField(max_length=100)
-    image = CloudinaryField('image', default='placeholder')
+    image = models.ImageField(upload_to='staff/')
     role = models.CharField(max_length=100)
     bio = models.TextField()
 
@@ -29,7 +27,7 @@ class TeamMembers(models.Model):
     Model for all the team members info
     """
     name = models.CharField(max_length=100)
-    image = CloudinaryField('image', default='placeholder')
+    image = models.ImageField(upload_to='staff/')
     role = models.CharField(max_length=100)
     bio = models.TextField()
 
@@ -42,7 +40,7 @@ class TattooMembers(models.Model):
     Model for the Tattoo and piercer info
     """
     name = models.CharField(max_length=100)
-    image = CloudinaryField('image', default='placeholder')
+    image = models.ImageField(upload_to='staff/')
     role = models.CharField(max_length=100)
     bio = models.TextField()
 
