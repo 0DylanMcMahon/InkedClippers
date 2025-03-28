@@ -3,6 +3,7 @@ from .models import (
     TeamMembers,
     UserTestimonial,
     BarberServices,
+    TattooServices,
     BarberMembers,
     TattooMembers,
     TattooQuestions,
@@ -20,6 +21,6 @@ admin.site.register(BarberMembers)
 
 admin.site.register(TattooMembers)
 
-admin.site.register(TattooQuestions)
+admin.site.register(TattooServices)
 
 admin.site.register(AftercareQuestions)

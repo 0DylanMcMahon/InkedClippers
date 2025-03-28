@@ -2,10 +2,36 @@
 {% load static %}
 
 {% block content %}
-<!-- This section is for the first two tables of the barbershop services  
-    -->
-<section class="container-fluid mb-md-3 mt-md-3">
-    <h2 class="text-white text-center mb-3 mt-2">Prices for Piercing Services</h2>
+
+<!-- This section is for the services of the barbershop displayed as a table -->
+<section class="container-fluid mb-5 pb-5">
+    <div class="row">
+        <div class="col-12 pt-3 px-5">
+            <h1 class="text-white text-center my-md-3">Prices For Barber Services</h1>
+            <table class="table-borderless table-services text-center p-5">
+                <thead>
+                    <tr>
+                        <th scope="col">HAIR &amp; SHAVE</th>
+                        <th scope="col">PRICES</th>
+                        <th scope="col">MEMBERSHIP DISCOUNTS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for service in services %}
+                    <tr>
+                        <th scope="row" class="text-center fw-semibold table-group-divider">{{ service.name }}</th>
+                        <td class="fw-semibold table-group-divider">{{ service.price }}</td>
+                        <td class="fw-semibold table-group-divider">{{ service.discount_price }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<!-- This section is for the first two tables of the barbershop services -->
+<h2 class="text-white text-center mb-3 mt-5">Prices for Piercing Services</h2>
+<section class="container-fluid mb-md-3 mt-md-5">
     <div class="row mx-md-5">
         <div class="col-md-6 py-2">
             <table class="table-borderless table-services text-center border-bottom">
@@ -100,33 +126,6 @@
         </div>
     </div>
 </div>
-<!-- This section is for the tattoo studio employees it has there name, image, nickname/role and a bio with some information about them
-        -->
-<section>
-    <div class="container-fluid my-md-3">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-white text-center my-3" id="meet-the-team">Tattoo Artist &amp; Piercer</h2>
-            </div>
-        </div>
-
-        <div class="row lg-justify-content-evenly g-3">
-            {% for member in members %}
-            <!--For loop to display all the team members to the site-->
-            <div class="col-md-6">
-                <div class="card border-3 mx-md-5">
-                    <div class="card-header text-center bg-dark text-white fw-bold">{{ member.name }}</div>
-                    <img src="{{ member.image.url }}" class="tattoo-team-img" alt="{{ member.name }}">
-                    <div class="card-body bg-dark">
-                        <p class="text-white text-center fs-6"><u>{{ member.role }}</u></p>
-                        <p class="card-text text-white fs-6 text-center">{{ member.bio }}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
 <!-- This section is for the tattoo studios FAQS
         -->
 <h2 class="text-white text-center my-4">Inked Clippers FAQ's</h2>

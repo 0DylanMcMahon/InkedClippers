@@ -16,7 +16,7 @@ urlpatterns = [
         ),
     path('about/', views.about, name='about-page'),
     path('team/', views.team, name='team-page'),
-    path('tattoo/', views.tattoo, name='tattoo-page'),
+    path('service/', views.service, name='service-page'),
     path('add_testimonial/', views.add_testimonial, name='testimonial-page'),
     path(
         'edit_testimonial/<int:pk>',

@@ -107,25 +107,28 @@ def about(request):
     return render(request, 'core/about.html')
 
 
-def barbers(request):
+def team(request):
     """
     View for barbers page which has services and barbershop employees
     """
     services = BarberServices.objects.all()
-    members = BarberMembers.objects.all()
+    membersB = BarberMembers.objects.all()
+    membersT = TattooMembers.objects.all()
     context = {
         'services': services,
-        'members': members,
+        'membersB': membersB,
+        'membersT': membersT,
     }
-    return render(request, 'core/barbers.html', context)
+    return render(request, 'core/team.html', context)
 
 
-def tattoo(request):
+def service(request):
     """
     View for tattoo page which has services, tattoo studio employees
     and a FAQ's for questions about getting a tattoo and aftercare
     """
     members = TattooMembers.objects.all()
+    services = BarberServices.objects.all()
     questions = TattooQuestions.objects.all()
     aftercare_questions = AftercareQuestions.objects.all()
     ear_piercings = TattooServices.objects.filter(name__in=[
@@ -173,6 +176,7 @@ def tattoo(request):
         )
     context = {
         'members': members,
+        'services': services,
         'ear_piercings': ear_piercings,
         'facial_piercings': facial_piercings,
         'oral_piercings': oral_piercings,
@@ -180,4 +184,4 @@ def tattoo(request):
         'questions': questions,
         'aftercare_questions': aftercare_questions,
     }
-    return render(request, 'core/tattoo.html', context)
+    return render(request, 'core/service.html', context)
