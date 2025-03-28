@@ -15,7 +15,7 @@ urlpatterns = [
         name='testimonials-detail'
         ),
     path('about/', views.about, name='about-page'),
-    path('barbers/', views.barbers, name='barbers-page'),
+    path('team/', views.team, name='team-page'),
     path('tattoo/', views.tattoo, name='tattoo-page'),
     path('add_testimonial/', views.add_testimonial, name='testimonial-page'),
     path(
