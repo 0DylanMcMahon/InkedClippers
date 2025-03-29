@@ -43,11 +43,12 @@
 
 
 <body>
-    <nav class="navbar navbar-expand-md bg-dark fixed-top">
+    <nav class="navbar navbar-expand-md blk-bg fixed-top">
         <div class="container-fluid">
             <!--Logo-->
-            <a class="navbar-brand" href="{% url 'home-page' %}"><span class=" fw-bold ms-2 text-white">Inked
-                    Clippers</span></a>
+            <a class="navbar-brand" href="{% url 'home-page' %}"><img src={% static 'images/logo.png' %} alt="" width="30" height="24" class="d-inline-block align-text-top rounded">
+                <span class=" fw-bold ms-2 text-white">Inked
+                    Clippers</span></img></a>
             <!-- Burger menu for nav-->
             <button class="navbar-toggler bg-light border-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -64,12 +65,16 @@
                             href="{% url 'home-page' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-label="Barbers Page"
-                            href="{% url 'barbers-page' %}">Barbers</a>
+                        <a class="nav-link text-white" aria-label="Team Page"
+                            href="{% url 'team-page' %}">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'tattoo-page' %}"
-                            aria-label="Tattoo Page">Tattoo</a>
+                        <a class="nav-link text-white" href="{% url 'service-page' %}"
+                            aria-label="Service Page">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"
+                            aria-label="Blog">Blog</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
@@ -79,12 +84,16 @@
                         <a class="nav-link text-white" aria-label="About Page" href="{% url 'about-page' %}">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" aria-label="Barbers Page"
-                            href="{% url 'barbers-page' %}">Barbers</a>
+                        <a class="nav-link text-white" aria-label="Team Page"
+                            href="{% url 'team-page' %}">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="{% url 'tattoo-page' %}"
-                            aria-label="Tattoo Page">Tattoo</a>
+                        <a class="nav-link text-white" href="{% url 'service-page' %}"
+                            aria-label="Service Page">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"
+                            aria-label="Blog">Blog</a>
                     </li>
                     {% endif %}
                 </ul>
@@ -138,9 +147,22 @@
     {% endblock %}
     <!--Contact details and opening times-->
     <footer class="mt-5">
-        <div class="container-fluid align-content-center">
+    <!--Location-->
+    <section>
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 my-4">
+                <div class="col-lg-12">
+                    <iframe title="Location of the barbershop"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1204.8882500865961!2d-8.983939360802736!3d52.84441221304227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b6d2d159a8405%3A0x462ed348b097865b!2sThe%20Height!5e0!3m2!1sen!2sie!4v1685393596646!5m2!1sen!2sie"
+                        allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+        <div class="container-fluid align-content-center blk-bg">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
                     <h2 class="text-white my-4 ms-5 text-start">Address</h2>
                     <p class="text-white text-start ms-5 fw-bold">Inked Clippers</p>
                     <p class="text-white text-start ms-5 fw-bold">47 The Height</p>
@@ -162,12 +184,14 @@
                         </span><a href="mailto:InkedClipers@gmail.com">InkedClippers@gmail.com</a></p>
                 </div>
             </div>
-            <div class="row bg-dark pt-3">
+            <div class="row blk-bg pt-3 p-3">
                 <div class="col d-flex justify-content-md-evenly justify-content-center fs-1">
                     <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener"><i
                             class="fa-brands fa-facebook mb-4 mx-2"></i></a>
                     <a href="https://www.twitter.com" aria-label="Twitter" target="_blank" rel="noopener"><i
                             class="fa-brands fa-twitter mx-2"></i></a>
+                    <img src={% static 'images/logo.png' %} alt="Inked Clippers logo" width="70" height="70" class="d-inline-block rounded thumbnail">
+                    </img></a>
                     <a href="https://www.linkedin.com/in/dylan-pigott-software-developer" aria-label="Linkedin"
                         target="_blank" rel="noopener"><i class="fa-brands fa-linkedin mx-2"></i></a>
                     <a href="https://github.com/DylanP400/InkedClippers" aria-label="Github" target="_blank"
