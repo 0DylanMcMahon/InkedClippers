@@ -1,3 +1,18 @@
+
+/* ------------------------------------------------------------------------- Colours */
+
+.blk {
+    color: black;
+}
+
+.blk-bg {
+    background-color: black;
+}
+
+.gld {
+    color: gold;
+}
+
 /* --------------------------------------------------------------------------- Nav bar */
 .nav-btns {
     display: flex;
@@ -8,7 +23,7 @@ nav {
     position: sticky;
 }
 
-/* ------------------------------------------------------------------------------General */
+/* ------------------------------------------------------------------------------ General */
 
 a {
     text-decoration: none;
@@ -24,7 +39,7 @@ a:hover {
 }
 
 body {
-    background-color: rgb(33, 33, 33);
+    background-color: whitesmoke;
     height: 100dvh;
     padding-top: 56px;
 }
@@ -97,19 +112,41 @@ iframe {
     width: 100%;
 }
 
-/* -------------------------------------------------------------------------------Barbershop page */
+/* ------------------------------------------------------------------------------- Team page */
+
+.card {
+    height: 100%;
+}
+
+.bg-img-tat {
+    background-image: url('../images/tat-bg.jpg');
+    background-size:contain;
+    background-position: center;
+   
+}
+
+.bg-img-barb {
+    background-image: url('../images/barb-bg.jpg');
+    background-size:contain;
+    background-position: center;
+}
+
+.vision {
+    z-index: 1;
+    font-size: 2em;
+    font-weight: bold;
+    background-color: black;
+    padding: 5px 10px;
+    color: white;
+  }
+
+/* ----------------------------------------------------------------------------- Services page */
 
 .table-services {
     color: white;
     height: 100%;
     width: 100%;
 }
-
-.card {
-    height: 100%;
-}
-
-/* -----------------------------------------------------------------------------Tattoo page */
 
 .accordion-button {
     background: #212529;
@@ -145,8 +182,7 @@ iframe {
     color: white;
 }
 
-
-/* --------------------------------------------------------------------------------Register page */
+/* -------------------------------------------------------------------------------- Register page */
 .asteriskField {
     display: none;
 }
@@ -181,7 +217,7 @@ iframe {
     border-radius: 25px;
 }
 
-/* ----------------------------------------------------------------------------------Profile page */
+/* ---------------------------------------------------------------------------------- Profile page */
 
 #profile-container {
     height: fit-content;
@@ -208,7 +244,7 @@ iframe {
     margin-bottom: 16px;
 }
 
-/* ------------------------------------------------------------------------ add_testimonial page */
+/* ------------------------------------------------------------------------ Add testimonial page */
 
 .reviews-btn,
 .testimonial-btns {
@@ -216,7 +252,7 @@ iframe {
     justify-content: center;
 }
 
-/* -------------------------------------------------------------------------- back to top button */
+/* -------------------------------------------------------------------------- Back to top button */
 
 .back-to-top {
     position: fixed;
