@@ -1,0 +1,11 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% block content %}
+
+{% for post in posts %}
+    <h1>{{ post.title }}</h1>
+    <p> {{ post.content }}</p>
+    <small>Inked Clippers on {{ post.date_posted}} </small>
+{% endfor %}
+
+{% endblock content %}

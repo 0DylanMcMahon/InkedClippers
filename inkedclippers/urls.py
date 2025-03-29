@@ -30,6 +30,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(
         template_name='users/logout.html'), name='logout-page'),
     path('', include('core.urls')),
+    path('blog/', include('blog.urls')),
 ]
 
 if settings.DEBUG:
