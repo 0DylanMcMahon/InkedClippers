@@ -8,11 +8,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Barbershop website for my fourth project with Code Institute">
+    <meta name="description" content="Inked Clippers barbershop and tattoo parlor">
     <meta name="keywords"
-        content="Barbershop, Tattoo Parlor, Inked Clipers, haircut, Tattoo, Fade, Ennis, Code Institute, Django, Bootstrap, Dylan Mc Mahon">
+        content="Barbershop, Tattoo Parlor, Inked Clipers, haircut, Tattoo, Fade, Ennis, Code Institute, Django, Bootstrap, Dylan McMahon">
     <meta name="author" content="Dylan Mc Mahon">
-    <title>Inked Clippers Barbershop &amp; Tattoo Parlor</title>
+    {% if title %}
+    <title>Inked Clippers - {{ title }}</title>
+    {% else %}
+        <title>Inked Clippers</title>
+    {% endif %}
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="https://res.cloudinary.com/dylanp400/image/upload/f_auto,q_auto/jivi9rvyd5qe4bndnwls"
         type="image/x-icon">
@@ -46,9 +50,9 @@
     <nav class="navbar navbar-expand-md blk-bg fixed-top">
         <div class="container-fluid">
             <!--Logo-->
-            <a class="navbar-brand" href="{% url 'home-page' %}"><img src={% static 'images/logo.png' %} alt="" width="30" height="24" class="d-inline-block align-text-top rounded">
+            <a class="navbar-brand" href="{% url 'home-page' %}"><img src={% static 'images/logo.png' %} alt="Inked Clippers logo" width="30" height="30" class="d-inline-block align-text-top rounded-circle">
                 <span class=" fw-bold ms-2 text-white">Inked
-                    Clippers</span></img></a>
+                    <span class="red">Clippers</span></span></img></a>
             <!-- Burger menu for nav-->
             <button class="navbar-toggler bg-light border-white" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -73,15 +77,12 @@
                             aria-label="Service Page">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#"
+                        <a class="nav-link text-white" href="{% url 'blog-home' %}"
                             aria-label="Blog">Blog</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-label="Home Page" href="{% url 'home-page' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" aria-label="About Page" href="{% url 'about-page' %}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" aria-label="Team Page"
@@ -92,7 +93,7 @@
                             aria-label="Service Page">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#"
+                        <a class="nav-link text-white" href="{% url 'blog-home' %}"
                             aria-label="Blog">Blog</a>
                     </li>
                     {% endif %}
@@ -148,7 +149,7 @@
     <!--Contact details and opening times-->
     <footer class="mt-5">
     <!--Location-->
-    <section>
+    <section class="m-0 p-0">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
@@ -160,27 +161,28 @@
             </div>
         </div>
     </section>
+    <hr class="red-bar">
         <div class="container-fluid align-content-center blk-bg">
             <div class="row">
-                <div class="col-lg-3 mb-4">
-                    <h2 class="text-white my-4 ms-5 text-start">Address</h2>
+                <div class="col-lg-3 my-4">
+                    <h2 class="red my-2 ms-5 text-start">Address</h2>
                     <p class="text-white text-start ms-5 fw-bold">Inked Clippers</p>
                     <p class="text-white text-start ms-5 fw-bold">47 The Height</p>
                     <p class="text-white text-start ms-5 fw-bold">Ennis, Co. Clare</p>
                     <p class="text-white text-start ms-5 fw-bold">Ireland</p>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <h2 class="text-white my-4 text-center">Opening Times</h2>
+                    <h2 class="red my-2 text-center">Opening Times</h2>
                     <p class="text-white"><span class="fw-bold">Monday - Friday: </span>09:00-20:00</p>
                     <p class="text-white"><span class="fw-bold">Saturday: </span>09:00-18:00</p>
                     <p class="text-white"><span class="fw-bold">Sunday: </span> Closed</p>
                 </div>
                 <div class="col-lg-3 my-4">
-                    <h2 class="text-white my-4 me-4 text-end"><i class="fa-solid fa-phone"></i> Phone
-                        &amp; Email <i class="fa-solid fa-envelope"></i></h2>
-                    <p class="text-white text-end me-5"><span class="fw-bold">Tel: </span><a
+                    <h2 class="red my-2 ms-4 text-end">Phone
+                        &amp; Email</h2>
+                    <p class="text-white text-end ms-5"><span class="fw-bold">Tel: </span><a
                             href="tel:085-123-000">0851230000</a></p>
-                    <p class="text-white text-end me-3"><span class="fw-bold">Email:
+                    <p class="text-white text-end ms-3"><span class="fw-bold">Email:
                         </span><a href="mailto:InkedClipers@gmail.com">InkedClippers@gmail.com</a></p>
                 </div>
             </div>
@@ -190,7 +192,7 @@
                             class="fa-brands fa-facebook mb-4 mx-2"></i></a>
                     <a href="https://www.twitter.com" aria-label="Twitter" target="_blank" rel="noopener"><i
                             class="fa-brands fa-twitter mx-2"></i></a>
-                    <img src={% static 'images/logo.png' %} alt="Inked Clippers logo" width="70" height="70" class="d-inline-block rounded thumbnail">
+                    <img src={% static 'images/logo.png' %} alt="Inked Clippers logo" width="70" height="70" class="d-inline-block rounded-circle">
                     </img></a>
                     <a href="https://www.linkedin.com/in/dylan-pigott-software-developer" aria-label="Linkedin"
                         target="_blank" rel="noopener"><i class="fa-brands fa-linkedin mx-2"></i></a>
