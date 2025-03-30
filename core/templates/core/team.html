@@ -4,7 +4,7 @@
 {% block content %}
 
 <!-- This section is for the barbershop employees it has there name, image, nickname/role and a bio with some information about them -->
-<section class="bg-img-barb">
+<section class="bg-img-barb pb-4">
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 blk-bg">
@@ -14,7 +14,7 @@
         <div class="row lg-justify-content-evenly g-3 mt-1">
             {% for member in membersB %}
             <!--For loop to display all the team members to the site-->
-            <div class="col-md-3">
+            <div class="col-md-3 mb-2">
                 <div class="card border-3 mt-2">
                     <div class="card-header text-center blk-bg text-white fw-bold fs-4">{{ member.name }}</div>
                     <img src="{{ member.image.url }}" class="img-fluid" alt="Team member">
@@ -30,23 +30,23 @@
 </section>
 
 <!-- This section is for the tattoo studio employees it has there name, image, nickname/role and a bio with some information about them  -->
-<section class="bg-img-tat pb-2">
-    <div class="container-fluid my-md-3">
+<section class="bg-img-tat pb-4">
+    <div class="container-fluid mb-md-3">
         <div class="row">
             <div class="col-12 blk-bg">
-                <h2 class="text-center my-3 pb-3 vision text-white" id="meet-the-team">Tattoo Artist &amp; Piercer</h2>
+                <h2 class="text-center my-3 pb-3 vision text-white fs-3" id="meet-the-team">Tattoo Artist &amp; Piercer</h2>
             </div>
         </div>
 
-        <div class="row g-5 justify-content-center mb-3">
+        <div class="row g-5 justify-content-center mt-1 mb-3">
             {% for member in membersT %}
             <!--For loop to display all the team members to the site-->
             <div class="col-md-4">
                 <div class="card border-3 mt-md-3 ">
                     <div class="card-header text-center blk-bg text-white fw-bold fs-4">{{ member.name }}</div>
                     <img src="{{ member.image.url }}" class="img-fluid" alt="{{ member.name }}">
-                    <div class="card-body bg-dark">
-                        <p class="text-white text-center fs-5"><u>{{ member.role }}</u></p>
+                    <div class="card-body blk-bg">
+                        <p class="red text-center fs-5"><u>{{ member.role }}</u></p>
                         <p class="card-text text-white fs-6 text-center">{{ member.bio }}</p>
                     </div>
                 </div>
