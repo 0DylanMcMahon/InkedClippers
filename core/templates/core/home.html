@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
 <!-- Home page callout 
     -->
 <div class="call-out">
@@ -12,16 +13,84 @@
                 <h1 class="text-white fs-1">Precision Cuts, Timeless Tattoos</h1>
                 <h2 class="text-white fs-2">Unleash Your Style at Inked
                     Clippers!</h2>
-                <a href="#Testimonials" aria-label="Jump to Testimonials"><i class="fa-solid fa-chevron-down fa-beat"
+                <a href="#Our_story" aria-label="Jump to Our Story"><i class="fa-solid fa-chevron-down fa-beat"
                         id="down-icon"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h2 class="text-center fs-2 mb-md-5 mt-3" id="Our_story">OUR STORY
+        </h2>
+    </div>
+</div>
+    <div class="row">
+    <div class="col-md-6 mt-0">
+        <img class="img-fluid rounded float-end py-3 mb-3 d-md-none" src="{% static 'images/ennis.jpg' %}"
+            alt="Inside of the barbershop">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 fs-4 mt-md-2 mb-md-5 p-4">
+        <p class="text-center">Established in 1965,
+            we are more than just a tattoo studio and barbershop we are a living legacy of creativity and
+            craftsmanship in Ennis. Step into our world of ink, clippers, and piercings, where hair artistry and
+            tattoo artistry come together to create an unforgettable experience. At Inked Clippers, we believe in the power of self-expression through
+            the
+            medium of art. Our team of talented barbers, skilled tattoo artists, and expert piercers are
+            passionate
+            about translating your unique style and personality into personalized masterpieces. Whether you're
+            looking for a fresh haircut that reflects your personality, an intricate tattoo that tells your
+            story,
+            or a stylish piercing to accentuate your individuality, we are here to bring your vision to life.
+        </p>
+    </div>
+    <div class="col-md-6 p-4">
+        <img class="img-fluid rounded float-end d-none d-md-inline thumbnail" src="{% static 'images/barberpole.jpg' %}"
+            alt="Barber pole">
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mt-0">
+        <img class="img-fluid rounded float-end mb-3 mr-2" src="{% static 'images/inked-clippers.jpg' %}"
+            alt="Inside of the barbershop">
+    </div>
+    <div class="col-md-6 fs-4 mt-md-5 p-4">
+        <p class="text-center">
+            With over 50 years of heritage, Inked Clippers has a rich history of serving the community with
+            exceptional barbering, tattooing, and piercing services. Our journey began as Clippers, a modest
+            barbershop founded by the visionary artist Mike O'Brien in the heart of Ennis. Over the years, we
+            have earned the trust and loyalty of our clients, becoming an integral part of their lives and stories.
+            Today, we proudly carry on this tradition, blending the artistry of our founder with modern techniques 
+            and innovations. In 2015, the legacy of Clippers evolved into Inked Clippers.
+        </p>
+    </div>
+</div>
+<div class="container-fluid my-md-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/gallery_1.jpg' %}" alt="" class="card-img-top img-fluid">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/gallery_2.jpg' %}" alt="" class="card-img-top">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="{% static 'images/gallery_3.jpg' %}" alt="" class="card-img-top">
             </div>
         </div>
     </div>
 </div>
 <!--Testimonials-->
 <section>
-    <h3 class="text-center text-white mt-3" id="Testimonials">Testimonials</h3>
-    <hr class="text-white">
+    <h3 class="text-center mt-3" id="Testimonials">Testimonials</h3>
+    <hr>
     <div class="container-fluid my-3 p-md-5">
         <div class="row d-flex justify-content-center">
             <div class="col-md-8">
@@ -55,25 +124,6 @@
 
                     {% endif %}
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--Location-->
-<section>
-    <div class="container-fluid mb-5">
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 class="text-white text-center my-4 ms-5">
-                    Location <i class="fa-solid fa-location-dot"></i></h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <iframe title="Location of the barbershop"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1204.8882500865961!2d-8.983939360802736!3d52.84441221304227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x485b6d2d159a8405%3A0x462ed348b097865b!2sThe%20Height!5e0!3m2!1sen!2sie!4v1685393596646!5m2!1sen!2sie"
-                    allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </div>
