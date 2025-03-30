@@ -1,11 +1,11 @@
 from django.urls import path
+from . import views
 from .views import (
     UserTestimonialsListView,
     UserTestimonialsDetailView,
     testimonialUpdate,
     testimonialDelete
 )
-from . import views
 
 urlpatterns = [
     path('', UserTestimonialsListView.as_view(), name='home-page'),

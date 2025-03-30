@@ -4,34 +4,33 @@
 {% block content %}
 
 <!-- This section is for the services of the barbershop displayed as a table -->
-<section class="container-fluid mb-5 pb-5">
-    <div class="row">
-        <div class="col-12 pt-3 px-5">
-            <h1 class="text-white text-center my-md-3">Prices For Barber Services</h1>
-            <table class="table-borderless table-services text-center p-5">
-                <thead>
-                    <tr>
-                        <th scope="col">HAIR &amp; SHAVE</th>
-                        <th scope="col">PRICES</th>
-                        <th scope="col">MEMBERSHIP DISCOUNTS</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for service in services %}
-                    <tr>
-                        <th scope="row" class="text-center fw-semibold table-group-divider">{{ service.name }}</th>
-                        <td class="fw-semibold table-group-divider">{{ service.price }}</td>
-                        <td class="fw-semibold table-group-divider">{{ service.discount_price }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+<div class="container-fluid bg-img-barb">
+    <div class="row blk-bg">
+        <div class="col">
+            <h2 class="text-center m-2 p-2 text-white">Our Services</h2>
         </div>
     </div>
-</section>
+    <div class="services-grid">
+        {% for service in services %}
+        <div class="service-card">
+            <img src="{% static 'images/logo.png' %}" alt="{{ service.name }}">
+            <div class="service-info">
+                <h3>{{ service.name }}</h3>
+                <p>{{ service.description }}</p>
+                <span class="price">€{{ service.price }}</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
 <!-- This section is for the first two tables of the barbershop services -->
-<h2 class="text-white text-center mb-3 mt-5">Prices for Piercing Services</h2>
-<section class="container-fluid mb-md-3 mt-md-5">
+ <div class="row blk-bg">
+    <div class="col">
+        <h2 class="text-white text-center m-2 p-3">Prices for Piercing Services</h2>
+    </div>
+ </div>
+<section class="container-fluid mb-md-3 bg-img-tat">
     <div class="row mx-md-5">
         <div class="col-md-6 py-2">
             <table class="table-borderless table-services text-center border-bottom">
@@ -77,55 +76,55 @@
             </table>
         </div>
     </div>
-</section>
 <!-- This section is for the last two tables of the barbershop services  
     -->
-<div class="container-fluid mb-md-3">
-    <div class="row mx-md-5">
-        <div class="col-md-6 py-2">
-            <table class="table-borderless table-services text-center border-bottom">
-                <thead>
-                    <tr>
-                        <th scope="col">Oral Piercing</th>
-                        <th scope="col">Service</th>
-                        <th scope="col">Jewellery</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for piercing in oral_piercings %}
-                    <tr>
-                        <th scope="row" class="text-center fw-semibold table-group-divider">{{ piercing.name }}
-                        </th>
-                        <td class="fw-semibold table-group-divider py-1">€{{ piercing.price }}</td>
-                        <td class="fw-semibold table-group-divider py-1">€{{ piercing.discount_price }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
-        </div>
-        <div class="col-md-6 py-2">
-            <table class="table-borderless table-services text-center border-bottom">
-                <thead>
-                    <tr>
-                        <th scope="col">Body Piercing</th>
-                        <th scope="col">Service</th>
-                        <th scope="col">Jewellery</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for piercing in body_piercings %}
-                    <tr>
-                        <th scope="row" class="text-center fw-semibold table-group-divider py-1">{{ piercing.name }}
-                        </th>
-                        <td class="fw-semibold table-group-divider py-1">€{{ piercing.price }}</td>
-                        <td class="fw-semibold table-group-divider py-1">€{{ piercing.discount_price }}</td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+    <div class="container-fluid mb-md-3">
+        <div class="row mx-md-5">
+            <div class="col-md-6 py-2">
+                <table class="table-borderless table-services text-center border-bottom">
+                    <thead>
+                        <tr>
+                            <th scope="col">Oral Piercing</th>
+                            <th scope="col">Service</th>
+                            <th scope="col">Jewellery</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for piercing in oral_piercings %}
+                        <tr>
+                            <th scope="row" class="text-center fw-semibold table-group-divider py-1">{{ piercing.name }}
+                            </th>
+                            <td class="fw-semibold table-group-divider py-1">€{{ piercing.price }}</td>
+                            <td class="fw-semibold table-group-divider py-1">€{{ piercing.discount_price }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6 py-2">
+                <table class="table-borderless table-services text-center border-bottom">
+                    <thead>
+                        <tr>
+                            <th scope="col">Body Piercing</th>
+                            <th scope="col">Service</th>
+                            <th scope="col">Jewellery</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for piercing in body_piercings %}
+                        <tr>
+                            <th scope="row" class="text-center fw-semibold table-group-divider py-1">{{ piercing.name }}
+                            </th>
+                            <td class="fw-semibold table-group-divider py-1">€{{ piercing.price }}</td>
+                            <td class="fw-semibold table-group-divider py-1">€{{ piercing.discount_price }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-</div>
+</section>
 <!-- This section is for the tattoo studios FAQS
         -->
 <h2 class="text-white text-center my-4">Inked Clippers FAQ's</h2>
