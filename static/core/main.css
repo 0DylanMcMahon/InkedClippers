@@ -1,6 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rye&display=swap');
 
 /* ------------------------------------------------------------------------- Colours */
-
 .blk {
     color: black;
 }
@@ -17,6 +17,14 @@
     color: red;
 }
 
+.red-bar {
+    border: none;
+    border-top: 5px solid red;
+    width: 100%;
+    margin: 0;
+    opacity: 1;
+}
+
 /* --------------------------------------------------------------------------- Nav bar */
 .nav-btns {
     display: flex;
@@ -25,6 +33,16 @@
 
 nav {
     position: sticky;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Moves it just below the navbar */
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: red;
 }
 
 /* ------------------------------------------------------------------------------ General */
@@ -38,10 +56,6 @@ a:hover {
     color: red;
 }
 
-.blk-bkround {
-    background-color: rgb(31, 37, 41);
-}
-
 body {
     background-color: whitesmoke;
     height: 100dvh;
@@ -52,16 +66,25 @@ body {
     text-decoration: none;
 }
 
-.blue {
-    color: rgb(35, 151, 245);
+h1,
+h2,
+h3,
+li,
+tr {
+    font-family:rye;
 }
 
-.red-bar {
-    border: none;
-    border-top: 5px solid red;
-    width: 100%;
-    margin: 0;
-    opacity: 1;
+.rye {
+    font-family: rye;
+}
+
+.lora {
+    font-family: lora;
+}
+
+p,
+td {
+    font-family: lora;
 }
 
 /*----------------------------------------------------------------------- Home page */

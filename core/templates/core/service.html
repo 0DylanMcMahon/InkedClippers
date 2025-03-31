@@ -30,10 +30,10 @@
         <h2 class="text-white text-center m-2 p-3">Prices for Piercing Services</h2>
     </div>
  </div>
-<section class="container-fluid mb-md-3 bg-img-tat">
+<section class="container-fluid mb-md-3 bg-img-tat pt-md-3">
     <div class="row mx-md-5">
         <div class="col-md-6 py-2">
-            <table class="table-borderless table-services text-center border-bottom">
+            <table class="table-bordered table-services text-center border-bottom">
                 <thead>
                     <tr>
                         <th scope="col">Ear Piercing</th>
@@ -44,7 +44,7 @@
                 <tbody>
                     {% for piercing in ear_piercings %}
                     <tr>
-                        <th scope="row" class="text-center fw-semibold table-group-divider py-1">
+                        <th scope="row" class="text-center fw-semibold table-group-divider py-1 lora">
                             {{ piercing.name }}
                         </th>
                         <td class="fw-semibold table-group-divider py-1">€{{ piercing.price }}</td>
@@ -55,7 +55,7 @@
             </table>
         </div>
         <div class="col-md-6 py-2">
-            <table class="table-borderless table-services text-center border-bottom">
+            <table class="table-bordered table-services text-center border-bottom">
                 <thead>
                     <tr>
                         <th scope="col">Facial Piercing</th>
@@ -66,7 +66,7 @@
                 <tbody>
                     {% for piercing in facial_piercings %}
                     <tr>
-                        <th scope="row" class="text-center fw-semibold table-group-divider py-1">{{ piercing.name }}
+                        <th scope="row" class="text-center fw-semibold table-group-divider py-1 lora">{{ piercing.name }}
                         </th>
                         <td class="fw-semibold table-group-divider py-1">€{{ piercing.price }}</td>
                         <td class="fw-semibold table-group-divider py-1">€{{ piercing.discount_price }}</td>
@@ -78,10 +78,10 @@
     </div>
 <!-- This section is for the last two tables of the barbershop services  
     -->
-    <div class="container-fluid mb-md-3">
+    <div class="container-fluid mb-md-3 pt-md-2 pb-md-4">
         <div class="row mx-md-5">
             <div class="col-md-6 py-2">
-                <table class="table-borderless table-services text-center border-bottom">
+                <table class="table-bordered table-services text-center border-bottom">
                     <thead>
                         <tr>
                             <th scope="col">Oral Piercing</th>
@@ -92,7 +92,7 @@
                     <tbody>
                         {% for piercing in oral_piercings %}
                         <tr>
-                            <th scope="row" class="text-center fw-semibold table-group-divider py-1">{{ piercing.name }}
+                            <th scope="row" class="text-center fw-semibold table-group-divider py-1 lora">{{ piercing.name }}
                             </th>
                             <td class="fw-semibold table-group-divider py-1">€{{ piercing.price }}</td>
                             <td class="fw-semibold table-group-divider py-1">€{{ piercing.discount_price }}</td>
@@ -102,7 +102,7 @@
                 </table>
             </div>
             <div class="col-md-6 py-2">
-                <table class="table-borderless table-services text-center border-bottom">
+                <table class="table-bordered table-services text-center border-bottom">
                     <thead>
                         <tr>
                             <th scope="col">Body Piercing</th>
@@ -113,7 +113,7 @@
                     <tbody>
                         {% for piercing in body_piercings %}
                         <tr>
-                            <th scope="row" class="text-center fw-semibold table-group-divider py-1">{{ piercing.name }}
+                            <th scope="row" class="text-center fw-semibold table-group-divider py-1 lora">{{ piercing.name }}
                             </th>
                             <td class="fw-semibold table-group-divider py-1">€{{ piercing.price }}</td>
                             <td class="fw-semibold table-group-divider py-1">€{{ piercing.discount_price }}</td>
