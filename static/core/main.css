@@ -321,19 +321,22 @@ iframe {
 
 /* ------------------------------------------------------------------------------- Login */
 
-.white-container {
+.blk-container {
     height: fit-content;
     width: fit-content;
     padding: 20px;
     margin: 20px;
-    border: 4px solid white;
+    border: 4px solid red;
     border-radius: 25px;
+    background-color: black;
 }
 
 .logout-container {
+    color: white;
+    background-color: black;
     padding: 20px;
     margin: 40px;
-    border: 4px solid white;
+    border: 4px solid red;
     border-radius: 25px;
 }
 
@@ -344,8 +347,10 @@ iframe {
     width: fit-content;
     padding: 20px;
     margin: 20px;
-    border: 4px solid white;
+    border: 4px solid red;
     border-radius: 25px;
+    color: white;
+    background-color: black;
 }
 
 #review-container {
@@ -353,8 +358,9 @@ iframe {
     width: fit-content;
     padding: 20px;
     margin: 20px;
-    border: 4px solid white;
+    border: 4px solid red;
     border-radius: 25px;
+    background-color: black;
 }
 
 .account-img {
@@ -362,6 +368,12 @@ iframe {
     width: 125px;
     margin-right: 20px;
     margin-bottom: 16px;
+}
+
+.btn-rd {
+    border: 2px solid red;
+    color: white;
+    background-color: black;
 }
 
 /* ------------------------------------------------------------------------ Add testimonial page */

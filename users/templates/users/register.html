@@ -7,7 +7,7 @@
     <div class="container my-2">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                <div class="white-container">
+                <div class="blk-container">
                     <form method="POST">
                         <!--csrf token is added to give security to django forms-->
                         {% csrf_token %}
@@ -17,7 +17,7 @@
                             {{ form|crispy }}
                         </fieldset>
                         <div class="form-group">
-                            <button class="btn btn-outline-info my-3 text-white" type="submit">Sign Up</button>
+                            <button class="btn btn-rd my-3 text-white" type="submit">Sign Up</button>
                             <small class="text-white pb-3 fw-bold d-block">Already have an account? <a
                                     href="{% url 'login-page' %}" class="blue">Sign
                                     in</a>
