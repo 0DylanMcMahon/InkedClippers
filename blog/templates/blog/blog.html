@@ -2,10 +2,56 @@
 {% load static %}
 {% block content %}
 
-{% for post in posts %}
-    <h1>{{ post.title }}</h1>
-    <p> {{ post.content }}</p>
-    <small>Inked Clippers on {{ post.date_posted}} </small>
-{% endfor %}
+<div class="blog-container">
+    <div class="row">
+        <div class="col">
+            <h1 class="blog-title">Inked Clippers Blog</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Blog Posts Section -->
+        <div class="col-md-8">
+            <div class="row">
+                {% for post in posts %}
+                <div class="col-md-6 mb-4">
+                    <div class="card blog-card">
+                        {% if post.cover_image %}
+                            <img src="{{ post.cover_image.url }}" class="card-img-top" alt="{{ post.title }}">
+                        {% else %}
+                            <img src="{% static 'images/logo.png' %}" class="card-img-top" alt="Default Image">
+                        {% endif %}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.title }}</h5>
+                            <p class="card-text">{{ post.excerpt }}</p>
+                            <a href="{% url 'blog_detail' post.slug %}" class="btn btn-rd">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Recent Posts Sidebar -->
+        <div class="col-md-4">
+            <h4>Recent Posts</h4>
+            <ul class="list-unstyled">
+                {% for recent_post in recent_posts %}
+                <li class="d-flex align-items-center mb-2">
+                    <a href="{{ recent_post.get_absolute_url }}" class="d-flex align-items-center">
+                        {% if recent_post.cover_image %}
+                            <img src="{{ recent_post.cover_image.url }}" alt="{{ recent_post.title }}" class="img-thumbnail me-2" style="width: 60px; height: 60px; object-fit: cover;">
+                        {% else %}
+                            <img src="{% static 'images/logo.png' %}" class="img-thumbnail me-2" style="width: 60px; height: 60px; object-fit: cover;" alt="Default Image">
+                        {% endif %}
+                        {{ recent_post.title }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 {% endblock content %}

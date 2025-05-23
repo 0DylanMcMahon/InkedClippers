@@ -1,7 +1,9 @@
-from django.urls import path
+from django.urls import path, include
+from .views import blog_home, blog_detail
 from . import views
 
 urlpatterns = [
     path('', views.blog_home, name='blog-home'),
-    path('about/', views.about, name='blog-about'),
+    path('<slug:slug>/', blog_detail, name='blog_detail'),
+    path('tinymce/', include('tinymce.urls')),
 ]
