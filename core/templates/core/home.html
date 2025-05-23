@@ -100,7 +100,7 @@
                         <li class="list-group-item bg-dark text-white border-3">
                             <p class="my-3">{{ user_testimonial.get_rating_display }}</p>
                             <p class="fw-light"><span class="fw-bold">Service by -</span>
-                                {{ user_testimonial.member }}
+                                {{ user_testimonial.member.name }}
                             </p>
                             <p class="fw-light"><span class="fw-bold">Inked Clippers -</span>
                                 {{ user_testimonial.service }}</p>
@@ -118,7 +118,7 @@
                     {% if page_obj.number == num %}
                     <a class="btn btn-black" href="?page={{ num }}#Testimonials">{{ num }}</a>
                     {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-                    <a class="btn btn-white" href="?page={{ num }}#Testimonials">{{ num }}</a>
+                    <a class="btn" href="?page={{ num }}#Testimonials">{{ num }}</a>
                     {% endif %}
                     {% endfor %}
 

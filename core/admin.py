@@ -24,3 +24,5 @@ admin.site.register(TattooMembers)
 admin.site.register(TattooServices)
 
 admin.site.register(AftercareQuestions)
+
+admin.site.register(TattooQuestions)

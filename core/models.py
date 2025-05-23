@@ -23,16 +23,19 @@ class BarberMembers(models.Model):
 
 
 class TeamMembers(models.Model):
-    """
-    Model for all the team members info
-    """
+    ROLE_CHOICES = (
+        ('barber', 'Barber'),
+        ('piercer', 'Piercer'),
+        ('tattoo artist', 'Tattoo Artist'),
+    )
     name = models.CharField(max_length=100)
-    image = models.ImageField(upload_to='staff/')
-    role = models.CharField(max_length=100)
-    bio = models.TextField()
+    image = models.ImageField(upload_to='staff/', blank=True, null=True)
+    bio = models.TextField(blank=True, null=True)
+    role = models.CharField(max_length=20, choices=ROLE_CHOICES)
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.get_role_display()})"
+
 
 
 class TattooMembers(models.Model):
@@ -45,7 +48,7 @@ class TattooMembers(models.Model):
     bio = models.TextField()
 
     def __str__(self):
-        return self.name
+        return f"{self.name} ({self.get_role_display()})"
 
 
 class UserTestimonial(models.Model):
