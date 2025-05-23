@@ -127,26 +127,26 @@
 </section>
 <!-- This section is for the tattoo studios FAQS
         -->
-<h2 class="text-white text-center my-4">Inked Clippers FAQ's</h2>
+<h2 class="text-center my-4">Inked Clippers FAQ's</h2>
 <section class="container-fluid border-3">
     <div class="row my-3">
         <div class="col-md-6">
-            <h3 class="text-white">Questions about getting Tattoos</h3>
-            <p class="text-white">Here are some of the frequently asked questions about getting a tattoo.</p>
+            <h3>Questions about getting Tattoos</h3>
+            <p>Here are some of the frequently asked questions about getting a tattoo.</p>
             <div class="accordion">
                 {% for question in questions %}
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        <button class="accordion-button lora" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseQuestion{{ question.id }}" aria-expanded="false"
                             aria-controls="collapseQuestion{{ question.id }}">
-                            <span class="fw-semibold text-white">{{ question.question }}</span>
+                            <span class="fw-semibold">{{ question.question }}</span>
                         </button>
                     </h2>
                     <div id="collapseQuestion{{ question.id }}" class="accordion-collapse collapse"
                         data-bs-parent=".accordion">
                         <div class="accordion-body mb-3">
-                            <span class="text-white">{{ question.answer|linebreaksbr }}</span>
+                            <span>{{ question.answer|linebreaksbr }}</span>
                         </div>
                     </div>
                 </div>
@@ -154,16 +154,16 @@
             </div>
         </div>
         <div class="col-md-6">
-            <h3 class="text-white text-end d-none d-md-block">Aftercare FAQ's</h3>
-            <h3 class="text-white text-end d-block d-md-none mt-3">Aftercare FAQ's</h3>
+            <h3 class="text-end d-none d-md-block">Aftercare FAQ's</h3>
+            <h3 class="text-end d-block d-md-none mt-3">Aftercare FAQ's</h3>
 
-            <p class="text-white text-end">Here are some of the frequently asked questions about tattoo
+            <p class="text-end">Here are some of the frequently asked questions about tattoo
                 aftercare.</p>
             <div class="accordion">
                 {% for questions in aftercare_questions %}
                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        <button class="accordion-button lora" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseAftercare{{ questions.id }}" aria-expanded="false"
                             aria-controls="collapseAftercare{{ questions.id }}">
                             <span class="fw-semibold text-white">{{ questions.question }}</span>

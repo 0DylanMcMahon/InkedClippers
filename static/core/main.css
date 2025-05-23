@@ -269,12 +269,12 @@ iframe {
 
 
 .accordion-button {
-    background: #212529;
+    background: #1c1c1e;
     color: white !important;
 }
 
 .accordion-button:not(.collapsed) {
-    background: #212529;
+    background: #1c1c1e;
     color: white;
 }
 
@@ -293,12 +293,12 @@ iframe {
 }
 
 .accordion-body {
-    background: #212529;
+    background: #1c1c1e;
     color: white;
 }
 
 .accordion-item {
-    background-color: #212529;
+    background-color: #1c1c1e;
     color: white;
 }
 
