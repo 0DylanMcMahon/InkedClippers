@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-0netrunner-inkedclipper-0aayr0u87zt.ws-eu120.gitpod.io', "inked-clippers-6a7245ad63c3.herokuapp.com"]
 
@@ -93,9 +93,16 @@ WSGI_APPLICATION = 'inkedclippers.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#      'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#  }
+
+database_url = os.environ.get("DATABASE_URL")
+if database_url and isinstance(database_url, bytes):
+    database_url = database_url.decode('utf-8')
 DATABASES = {
-     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
- }
+    'default': dj_database_url.parse(database_url)
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
