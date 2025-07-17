@@ -1,16 +1,15 @@
 {% extends "core/base.html" %}
 
 {% block content %}
-<div class="container mt-5">
+<div class="container">
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h1 class="mb-3">{{ post.title }}</h1>
-            {% if post.image %}
-                <img src="{{ post.image.url }}" class="img-fluid mb-3" alt="{{ post.title }}">
+            {% if post.cover_image %}
+                <img src="{{ post.cover_image.url }}" class="img-fluid mb-3 blog-hero" alt="{{ post.title }}">
             {% endif %}
             <p>{{ post.content|safe }}</p>
-            <p class="text-muted">{{ post.created_at|date:"F d, Y" }}</p>
-            <p class="text-muted">Inked Clippers</p>
+            <p class="text-muted mb-0">By Inked Clippers</p>
+            <p class="text-muted mb-3">{{ post.created_at|date:"F d, Y" }}</p>
             <a href="{% url 'blog-home' %}" class="btn btn-rd">← Back to Blog</a>
         </div>
     </div>

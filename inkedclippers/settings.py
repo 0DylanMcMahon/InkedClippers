@@ -30,12 +30,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['8000-0netrunner-inkedclipper-0aayr0u87zt.ws-eu118.gitpod.io', "inked-clippers-6a7245ad63c3.herokuapp.com"]
+ALLOWED_HOSTS = ['8000-0netrunner-inkedclipper-0aayr0u87zt.ws-eu120.gitpod.io', "inked-clippers-6a7245ad63c3.herokuapp.com"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -144,6 +145,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -154,3 +156,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 LOGIN_REDIRECT_URL = 'home-page'
 LOGIN_URL = 'login-page'
+DEFAULT_BLOG_IMAGE = '/static/images/default-logo.png'
