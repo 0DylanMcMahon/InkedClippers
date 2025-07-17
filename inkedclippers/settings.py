@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-0netrunner-inkedclipper-0aayr0u87zt.ws-eu120.gitpod.io', "inked-env.eba-bm6mikhm.us-west-2.elasticbeanstalk.com"]
 
